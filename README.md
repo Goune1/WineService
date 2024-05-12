@@ -7,7 +7,8 @@ npm install -D tailwindcss postcss autoprefixer
 
 <font size="+2">axios et router dom</font> 
 
-npm install axios react-router-dom
+npm install axios react-router-dom @headlessui/react @heroicons/react
+
 
 
 
