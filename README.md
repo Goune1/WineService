@@ -1,16 +1,7 @@
 <font size="+1">A installer pour le front end :</font>
 
-<font size="+2">tailwind :</font> 
 
-npm install -D tailwindcss postcss autoprefixer
-
-
-<font size="+2">axios et router dom :</font> 
-
-npm install axios react-router-dom @headlessui/react @heroicons/react
-
-
-
+npm install -D tailwindcss postcss autoprefixer axios react-router-dom @headlessui/react @heroicons/react js-cookie
 
 
 <font size="+1">Pour le back end :</font>
