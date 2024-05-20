@@ -55,7 +55,9 @@ app.use(
     })
 );
 
-
+app.get('/api', async (req, res) => {
+    res.send('ouais ma poule')
+}
 
 app.post('/api/signup', async (req, res) => {
   const formData = req.body;
