@@ -78,7 +78,7 @@ export default function Example() {
           {isLoggedIn ? (
             <span>Bonjour, {username} !</span>
           ) : (
-            <a href="/login">Se connecter <span aria-hidden="true">&rarr;</span> </a> 
+            <a href="wine.gounevps.com/login">Se connecter <span aria-hidden="true">&rarr;</span> </a> 
           )}
         </div>
       </nav>
