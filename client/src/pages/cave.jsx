@@ -43,8 +43,6 @@ function Cave() {
           <Nav/>
 
           <NotLoggedIn/>
-
-          <Footer/>
         </>
       )}
 
