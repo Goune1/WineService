@@ -11,7 +11,7 @@ export default function Consommation() {
               const formData = {
                 email: Cookies.get('email'),
               };
-              const res = await axios.post('/api/searchConsommation', formData);
+              const res = await axios.post('https://api.gounevps.com/api/searchConsommation', formData);
               console.log(res)
               
             } catch (err) {
