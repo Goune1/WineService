@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
 const mongoose = require('mongoose')
@@ -55,9 +55,7 @@ app.use(
     })
 );
 
-app.get('/api', async (req, res) => {
-    res.send('ouais ma poule')
-}
+
 
 app.post('/api/signup', async (req, res) => {
   const formData = req.body;
