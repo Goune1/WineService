@@ -4,7 +4,8 @@
   "description": "une app pour gérer sa cave",
   "main": "index.js",
   "scripts": {
-    "test": "node server"
+    "test": "node server",
+    "start": "node server/index.js"
   },
   "author": "Goune | Gaël LE DREO",
   "license": "ISC",
