@@ -56,7 +56,7 @@ app.use(
 );
 
 app.get('/', (req, res) => {
-  res.send("yo les boyz")
+  res.send("Bienvenue sur l'api de Wine Service")
 })
 
 
