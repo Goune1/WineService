@@ -48,7 +48,7 @@ export default function Example() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      axios.post('/api/signup', formData)
+      axios.post('https://api.gounevps.com/api/signup', formData)
       .then(res => {
         // Redirection vers une autre page après soumission du formulaire
         naviguate('/cave');
