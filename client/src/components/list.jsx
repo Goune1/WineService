@@ -159,7 +159,7 @@ export default function Example() {
           
           <div className="fixed z-50 top-0 left-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
           <form onSubmit={AddhandleSubmit}>
-            <div className='flex z-100 flex-col pb-14 mt-4 border border-gray-300 rounded-lg w-64 lg:w-96 bg-white'>
+            <div className='flex z-100 flex-col pb-14 w-full h-full mt-4 border border-gray-300 rounded-lg w-64 lg:w-96 bg-white'>
               <XMarkIcon className="h-6 w-6 ml-4 mt-4 cursor-pointer" aria-hidden="true" onClick={() => setIsOpen(false)} />
               <div className='flex flex-col gap-4 items-center pt-8'>
                 <div>
