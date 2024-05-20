@@ -55,6 +55,9 @@ app.use(
     })
 );
 
+app.get('/', (req, res) => {
+  res.send("yo les boyz")
+})
 
 
 app.post('/api/signup', async (req, res) => {
