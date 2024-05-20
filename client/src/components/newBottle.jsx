@@ -20,7 +20,7 @@ function NewBottle() {
   const AddhandleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/addWine', AddformData);
+      const response = await axios.post('https://api.gounevps.com/api/addWine', AddformData);
       console.log(response.data); // Afficher la réponse du serveur (optionnel)
       // Réinitialiser le formulaire après l'envoi réussi (optionnel)
       AddsetFormData({ email: '', castle: '', year: '', quantity: '', type: '' });
