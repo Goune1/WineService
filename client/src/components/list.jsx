@@ -157,7 +157,7 @@ export default function Example() {
         {isOpen && ( // Affiche le menu si isOpen est true
         <>
           
-          <div className="fixed z-50 top-0 left-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
+          <div className="fixed z-50 top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center">
           <form onSubmit={AddhandleSubmit}>
             <div className='flex z-100 flex-col pb-14 w-full h-full mt-4 border border-gray-300 rounded-lg w-64 lg:w-96 bg-white'>
               <XMarkIcon className="h-6 w-6 ml-4 mt-4 cursor-pointer" aria-hidden="true" onClick={() => setIsOpen(false)} />
