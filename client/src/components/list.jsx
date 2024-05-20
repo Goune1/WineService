@@ -206,7 +206,7 @@ export default function Example() {
       </div>
 
     <div className="flex justify-center">
-  <ul role="list" className="grid grid-cols-1 gap-x-4 gap-y-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 pt-12 pb-44 z-0">
+  <ul role="list" className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 pt-12 pb-44 z-0">
     {filteredClients.map((client, index) => (
       <li key={index} className="overflow-hidden rounded-xl border border-gray-200 w-72 lg:w-96">
         <div className="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6">
