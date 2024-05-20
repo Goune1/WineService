@@ -24,7 +24,7 @@ export default function Example() {
           email: Cookies.get('email'),
           name: Cookies.get('username')
         };
-        const res = await axios.post('/api/search', formData);
+        const res = await axios.post('https://api.gounevps.com/api/search', formData);
         const wines = res.data.wines[0].wines;
   
         if (wines && wines.length > 0) {
@@ -55,7 +55,7 @@ export default function Example() {
   const AddhandleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/addWine', AddformData);
+      const response = await axios.post('https://api.gounevps.com/api/addWine', AddformData);
       // Réinitialiser le formulaire après l'envoi réussi (optionnel)
       AddsetFormData({ email: '', castle: '', year: '', quantity: '', type: '' });
       location.reload()
@@ -99,7 +99,7 @@ export default function Example() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/editQuantity', {
+      const response = await axios.post('https://gounevps.com/api/editQuantity', {
         email: email,
         castle: castleOfSelectedClient, // Utiliser la valeur actuelle de castleOfSelectedClient
         newQuantity: formData.quantity,
@@ -122,7 +122,7 @@ export default function Example() {
         castleToDelete: deletedClient.castle,
         email: Cookies.get('email')
       }
-      await axios.post("/api/deleteCastle", castleToDelete)
+      await axios.post("https://api.gounevps.com/api/deleteCastle", castleToDelete)
       setClients(clients.filter((_, i) => i !== index));
     } catch (err) {
       console.error('Erreur lors de la suppression du client:', err);
