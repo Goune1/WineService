@@ -99,7 +99,7 @@ export default function Example() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://gounevps.com/api/editQuantity', {
+      const response = await axios.post('https://api.gounevps.com/api/editQuantity', {
         email: email,
         castle: castleOfSelectedClient, // Utiliser la valeur actuelle de castleOfSelectedClient
         newQuantity: formData.quantity,
