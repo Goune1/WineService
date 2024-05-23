@@ -1,27 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 import AlreadyLoggedIn from '../components/alreadyLoggedIn'
+import {CircularProgress} from "@nextui-org/progress";
 
 
 export default function Example() {
-  const [donnees, setDonnees] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     document.title = "Se connecter";
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('/api/donnees');
-        setDonnees(response.data);
-        console.log(response.data)
-      } catch (error) {
-        console.error('Erreur lors de la récupération des données:', error);
-      }
-    };
-
-    fetchData();
 
     const usernameCookie = Cookies.get('username');
     if (usernameCookie) {
@@ -60,6 +49,12 @@ export default function Example() {
     } catch (error) {
       console.error('Erreur lors de l\'envoi du formulaire:', error);
     }
+  };
+  
+  const [showLoader, setShowLoader] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowLoader(true);
   };
 
 
@@ -124,10 +119,17 @@ export default function Example() {
               <div>
                 <button
                   type="submit"
+                  onClick={handleButtonClick}
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Se connecter
+                  Se connecter 
                 </button>
+
+                {showLoader && (
+                  <div className='flex items-center justify-center mt-4'>
+                    <CircularProgress size='md'strokeWidth={4} color='primary' aria-label="Loading..." />
+                  </div>
+                )}
               </div>
             </form>
   
