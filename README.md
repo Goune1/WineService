@@ -38,10 +38,10 @@ Voici une capture d'écran de l'interface utilisateur :
 1. Clonez le dépôt :
 
    ```bash
-   git clone https://github.com/votre-utilisateur/mon-super-site-web.git
+   git clone https://github.com/Goune1/WineService.git
    cd mon-super-site-web
 
-Installez les dépendances pour le front-end et le back-end :
+2. Installez les dépendances pour le front-end et le back-end :
 
    ```bash
    cd client
