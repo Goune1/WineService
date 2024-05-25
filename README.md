@@ -14,7 +14,7 @@ Bienvenue sur le projet **WineService** ! Ce projet utilise les technologies Rea
 
 Voici une capture d'écran de l'interface utilisateur :
 
-![Aperçu du site](./client/public/image/background_hero.png)
+![Aperçu du site](./client/public/image/app_screenshot.png)
 
 ## Fonctionnalités
 
