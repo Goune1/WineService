@@ -20,9 +20,9 @@ Voici une capture d'écran de l'interface utilisateur :
 
 - Interface utilisateur réactive et moderne avec React
 - Style personnalisé et rapide grâce à Tailwind CSS
+- Une UI moderne grâce à TailwindUI et NextUI
 - Serveur backend puissant avec Express
 - Routes d'API sécurisées et robustes
-- Gestion des états centralisée avec Redux (optionnel)
 
 ## Installation
 
