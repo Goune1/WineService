@@ -9,14 +9,12 @@ Bienvenue sur le projet **WineService** ! Ce projet utilise les technologies Rea
 - [Installation](#installation)
 - [Utilisation](#utilisation)
 - [Structure du Projet](#structure-du-projet)
-- [Contribution](#contribution)
-- [Licence](#licence)
 
 ## Aperçu
 
 Voici une capture d'écran de l'interface utilisateur :
 
-![Aperçu du site](./screenshot.png)
+![Aperçu du site](./client/public/image/background_hero.png)
 
 ## Fonctionnalités
 
@@ -78,7 +76,7 @@ Voici une capture d'écran de l'interface utilisateur :
 ## Structure du Projet
 
    ```plaintext
-   mon-super-site-web/
+   wineservice/
    ├── client/             # Code du front-end React
    │   ├── public/
    │   ├── src/
@@ -106,5 +104,3 @@ Voici une capture d'écran de l'interface utilisateur :
    │   ├── vercel.json
    │   └── ... 
    └── README.md
-
-
