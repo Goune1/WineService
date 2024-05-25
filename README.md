@@ -37,7 +37,7 @@ Voici une capture d'écran de l'interface utilisateur :
 
    ```bash
    git clone https://github.com/Goune1/WineService.git
-   cd mon-super-site-web
+   cd wineservice
 
 2. Installez les dépendances pour le front-end et le back-end :
 
