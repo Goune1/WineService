@@ -1,13 +1,3 @@
-<font size="+1">A installer pour le front end :</font>
-
-
-npm install -D tailwindcss postcss autoprefixer axios react-router-dom @headlessui/react @heroicons/react js-cookie
-
-
-<font size="+1">Pour le back end :</font>
-
-npm i express path bcrypt cookie-parser express-session mongoose nodemailer connect-mongodb-session cors axios body-parser
-
 # Mon Super Site Web
 
 Bienvenue sur le projet **Mon Super Site Web** ! Ce projet utilise les technologies React pour le front-end, Tailwind CSS pour le style, et Express pour le back-end.
@@ -50,4 +40,12 @@ Voici une capture d'écran de l'interface utilisateur :
    ```bash
    git clone https://github.com/votre-utilisateur/mon-super-site-web.git
    cd mon-super-site-web
+
+Installez les dépendances pour le front-end et le back-end :
+
+   ```bash
+   cd client
+   npm install -D tailwindcss postcss autoprefixer axios react-router-dom @headlessui/react @heroicons/react js-cookie
+   cd ../server
+   npm i express path bcrypt cookie-parser express-session mongoose nodemailer connect-mongodb-session cors axios body-parser  
 
