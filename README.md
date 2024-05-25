@@ -49,3 +49,16 @@ Voici une capture d'écran de l'interface utilisateur :
    cd ../server
    npm i express path bcrypt cookie-parser express-session mongoose nodemailer connect-mongodb-session cors axios body-parser  
 
+## Utilisation
+
+### Lancer le Front-End 
+
+1. Aller dans le répertoire du client
+
+   ```bash
+   cd client
+
+2. Lancer l'application React
+
+  ```bash
+   npm start
