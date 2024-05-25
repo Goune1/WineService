@@ -1,6 +1,6 @@
-# Mon Super Site Web
+# WineService
 
-Bienvenue sur le projet **Mon Super Site Web** ! Ce projet utilise les technologies React pour le front-end, Tailwind CSS pour le style, et Express pour le back-end.
+Bienvenue sur le projet **WineService** ! Ce projet utilise les technologies React pour le front-end, Tailwind CSS pour le style, et Express pour le back-end.
 
 ## Table des Matières
 
@@ -60,5 +60,51 @@ Voici une capture d'écran de l'interface utilisateur :
 
 2. Lancer l'application React
 
-  ```bash
+   ```bash
    npm start
+
+### Lancer le Back-End
+
+1. Aller dans le répertoire du serveur
+
+   ```bash
+   cd ../server
+
+2. Lancer le serveur
+
+   ```bash
+   node index.js
+
+## Structure du Projet
+
+   ```plaintext
+   mon-super-site-web/
+   ├── client/             # Code du front-end React
+   │   ├── public/
+   │   ├── src/
+   │   │   ├── components/
+   │   │   ├── pages/
+   │   │   ├── App.jsx
+   │   │   ├── main.jsx
+   │   │   ├── index.css
+   │   │   └── ...
+   │   ├── .eslintrc.cjs
+   │   ├── index.html
+   │   ├── package-lock.json
+   │   ├── package.json
+   │   ├── postcss.config.js
+   │   ├── README.md
+   │   ├── tailwind.config.js
+   │   ├── vercel.json
+   │   ├── vite.config.js
+   │   └── ...
+   ├── server/             # Code du back-end Express
+   │   ├── schemas/
+   │   ├── index.js
+   │   ├── package-lock.json
+   │   ├── package.json
+   │   ├── vercel.json
+   │   └── ... 
+   └── README.md
+
+
