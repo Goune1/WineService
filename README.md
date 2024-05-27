@@ -45,7 +45,7 @@ Voici une capture d'écran de l'interface utilisateur :
    cd client
    npm install -D tailwindcss postcss autoprefixer axios react-router-dom @headlessui/react @heroicons/react js-cookie
    cd ../server
-   npm i express path bcrypt cookie-parser express-session mongoose nodemailer connect-mongodb-session cors axios body-parser  
+   npm i express path bcryptjs express-session mongoose nodemailer connect-mongodb-session cors axios body-parser  
 
 ## Utilisation
 
