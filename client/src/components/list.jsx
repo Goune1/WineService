@@ -159,7 +159,7 @@ export default function Example() {
           
           <div className="fixed z-50 top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center">
           <form onSubmit={AddhandleSubmit}>
-            <div className='flex z-100 flex-col pb-14 w-full h-full mt-4 border border-gray-300 rounded-lg w-64 lg:w-96 bg-white'>
+            <div className='flex z-100 flex-col pb-14 h-full mt-4 border border-gray-300 rounded-lg w-64 lg:w-96 bg-white'>
               <XMarkIcon className="h-6 w-6 ml-4 mt-4 cursor-pointer" aria-hidden="true" onClick={() => setIsOpen(false)} />
               <div className='flex flex-col gap-4 items-center pt-8'>
                 <div>
@@ -205,76 +205,75 @@ export default function Example() {
         )}
       </div>
 
-    <div className="flex justify-center">
-  <ul role="list" className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 pt-12 pb-44 z-0">
-    {filteredClients.map((client, index) => (
-      <li key={index} className="overflow-hidden rounded-xl border border-gray-200 w-72 lg:w-96">
-        <div className="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6">
-          <div className="text-xl font-medium leading-6 text-gray-900">{client.castle}</div>
-          <Menu as="div" className="relative ml-auto z-0">
-            <Menu.Button className="-m-2.5 z-0 block p-2.5 text-gray-400 hover:text-gray-500">
-              <span className="sr-only">Open options</span>
-              <EllipsisHorizontalIcon className="h-5 w-5 z-0" aria-hidden="true" />
-            </Menu.Button>
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-100"
-              enterFrom="transform opacity-0 scale-95"
-              enterTo="transform opacity-100 scale-100"
-              leave="transition ease-in duration-75"
-              leaveFrom="transform opacity-100 scale-100"
-              leaveTo="transform opacity-0 scale-95"
-            >
-              <Menu.Items className="absolute right-0 z-10 mt-0.5 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      className={`${active ? 'bg-gray-50' : ''} block px-3 py-1 cursor-pointer text-sm leading-6 text-gray-900`}
-                      onClick={() => handleEditClick(index)}
-                    >
-                      Modifier<span className="sr-only">, {client.castle}</span>
-                    </a>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <button
-                      onClick={() => handleDelete(index)}
-                      className={`${active ? 'bg-gray-50' : ''} block px-3 py-1 text-sm leading-6 text-gray-900 w-full text-left`}
-                    >
-                      Supprimer<span className="sr-only">, {client.castle}</span>
-                    </button>
-                  )}
-                </Menu.Item>
-              </Menu.Items>
-            </Transition>
-          </Menu>
-        </div>
-        <dl className="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm leading-6">
-          <div className="flex justify-between gap-x-4 py-3">
-            <dt className="text-gray-500">Année</dt>
-            <dd className="text-gray-700">
-              <div className="font-medium text-gray-900">{client.year}</div>
-            </dd>
-          </div>
-          <div className="flex justify-between gap-x-4 py-3">
-            <dt className="text-gray-500">Quantité :</dt>
-            <dd className="text-gray-700">
-              <div className="font-medium text-gray-900">{client.quantity}</div>
-            </dd>
-          </div>
-          <div className="flex justify-between gap-x-4 py-3">
-            <dt className="text-gray-500">Type de vin :</dt>
-            <dd className="flex items-start gap-x-2">
-              <div className="font-medium text-gray-900">{client.type}</div>
-            </dd>
-          </div>
-        </dl>
-      </li>
-    ))}
-  </ul>
-</div>
-
+      <div className='flex  justify-center'>
+      <ul role="list" className="grid grid-cols-1 small:grid-cols-2 medium:grid-cols-3 large:grid-cols-4 gap-x-4 gap-y-6 lg:gap-x-8 xl:gap-x-12 pt-12 pb-44 z-0">
+        {filteredClients.map((client, index) => (
+          <li key={index} className="overflow-hidden rounded-xl border border-gray-200 w-72 lg:w-96">
+            <div className="flex items-center justify-center border-b border-gray-900/5 bg-gray-50 p-6">
+              <div className="text-xl font-medium leading-6 text-gray-900">{client.castle}</div>
+              <Menu as="div" className="relative ml-auto z-0">
+                <Menu.Button className="-m-2.5 z-0 block p-2.5 text-gray-400 hover:text-gray-500">
+                  <span className="sr-only">Open options</span>
+                  <EllipsisHorizontalIcon className="h-5 w-5 z-0" aria-hidden="true" />
+                </Menu.Button>
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-100"
+                  enterFrom="transform opacity-0 scale-95"
+                  enterTo="transform opacity-100 scale-100"
+                  leave="transition ease-in duration-75"
+                  leaveFrom="transform opacity-100 scale-100"
+                  leaveTo="transform opacity-0 scale-95"
+                >
+                  <Menu.Items className="absolute right-0 z-10 mt-0.5  origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          className={`${active ? 'bg-gray-50' : ''} block px-3 py-1 cursor-pointer text-sm leading-6 text-gray-900`}
+                          onClick={() => handleEditClick(index)}
+                        >
+                          Modifier<span className="sr-only">, {client.castle}</span>
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <button
+                          onClick={() => handleDelete(index)} // Gestionnaire d'événements onClick pour le bouton delete
+                          className={`${active ? 'bg-gray-50' : ''} block px-3 py-1 text-sm leading-6 text-gray-900 w-full text-left`}
+                        >
+                          Supprimer<span className="sr-only">, {client.castle}</span>
+                        </button>
+                      )}
+                    </Menu.Item>
+                  </Menu.Items>
+                </Transition>
+              </Menu>
+            </div>
+            <dl className="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm leading-6">
+              <div className="flex justify-between gap-x-4 py-3">
+                <dt className="text-gray-500">Année</dt>
+                <dd className="text-gray-700">
+                  <div className="font-medium text-gray-900">{client.year}</div>
+                </dd>
+              </div>
+              <div className="flex justify-between gap-x-4 py-3">
+                <dt className="text-gray-500">Quantité :</dt>
+                <dd className="text-gray-700">
+                  <div className="font-medium text-gray-900">{client.quantity}</div>
+                </dd>
+              </div>
+              <div className="flex justify-between gap-x-4 py-3">
+                <dt className="text-gray-500">Type de vin :</dt>
+                <dd className="flex items-start gap-x-2">
+                  <div className="font-medium text-gray-900">{client.type}</div>
+                </dd>
+              </div>
+            </dl>
+          </li>
+        ))}
+      </ul>
+      </div>  
       
           {selectedClientIndex !== null && showEditForm && (
               <div className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center">
