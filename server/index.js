@@ -37,22 +37,6 @@ async function connectToDatabase() {
 connectToDatabase()
 
 
-
-// création de la db pour la session
-const store = new MongoDBStore({
-    uri: "mongodb://goune:goune1407@ac-nef3pac-shard-00-02.0x9jwgi.mongodb.net:27017,ac-nef3pac-shard-00-01.0x9jwgi.mongodb.net:27017,ac-nef3pac-shard-00-00.0x9jwgi.mongodb.net:27017/WineApp?authSource=admin&replicaSet=atlas-tibrt3-shard-0&ssl=true",
-    collection: "Sessions"
-});
-
-app.use(
-    session({
-      secret: "secret",
-      resave: false,
-      saveUninitialized: false,
-      store: store,
-    })
-);
-
 app.get('/', (req, res) => {
   res.send("Bienvenue sur l'api de Wine Service")
 })
