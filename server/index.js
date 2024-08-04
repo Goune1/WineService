@@ -63,9 +63,6 @@ app.post('/api/signup', async (req, res) => {
 
   const userdata = await loginCollection.insertMany(data)
 
-  req.session.isLoggedIn = true;
-
-
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
@@ -116,8 +113,6 @@ app.post("/api/login", async (req, res) => {
     email: data.email
   }
 
-
-  req.session.isAuth = true;
   res.status(200).json({ message: "Correctly Logged IN", user: dataSent });
 })
 
