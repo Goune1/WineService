@@ -23,7 +23,7 @@ const loginCollection = require("./schemas/loginSchema")
 const WineList = require("./schemas/wineSchema");
 const consoCollection = require("./schemas/ConsoSchema");
 
-const DB_URL = "mongodb://goune:goune1407@ac-nef3pac-shard-00-02.0x9jwgi.mongodb.net:27017,ac-nef3pac-shard-00-01.0x9jwgi.mongodb.net:27017,ac-nef3pac-shard-00-00.0x9jwgi.mongodb.net:27017/WineApp?authSource=admin&replicaSet=atlas-tibrt3-shard-0&ssl=true";
+const DB_URL = 'mongodb://goune:goune1407@ac-nef3pac-shard-00-02.0x9jwgi.mongodb.net:27017,ac-nef3pac-shard-00-01.0x9jwgi.mongodb.net:27017,ac-nef3pac-shard-00-00.0x9jwgi.mongodb.net:27017/WineApp?authSource=admin&replicaSet=atlas-tibrt3-shard-0&ssl=true';
 
 async function connectToDatabase() {
     try {
@@ -35,8 +35,6 @@ async function connectToDatabase() {
 }
 
 connectToDatabase()
-
-
 
 
 
@@ -222,7 +220,7 @@ app.post("/api/editQuantity", async (req, res) => {
 
   castle.quantity = newQuantity
 
-  if(newQuantity < currentQuantity) {
+  /*if(newQuantity < currentQuantity) {
     const quantityToAdd = currentQuantity - newQuantity
 
     let checkUser = await consoCollection.findOne({ email });
@@ -243,7 +241,7 @@ app.post("/api/editQuantity", async (req, res) => {
     }
 
     await checkUser.save();
-  }
+  }*/
 
   await user.save();
 
